@@ -9,7 +9,7 @@ services:
       - "3000:3000"  # same port is okay on different instance
     working_dir: /app
     volumes:
-      - ./app_code:/app   # volume where Jenkins pipeline will mount your code
+      - ./:/app   # volume where Jenkins pipeline will mount your code
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
