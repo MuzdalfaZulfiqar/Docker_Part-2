@@ -93,6 +93,7 @@ function AddItemForm({ onNewItem }) {
         <Form onSubmit={submitNewItem}>
             <InputGroup className="mb-3">
                 <Form.Control
+                    id="todo-input"
                     value={newItem}
                     onChange={e => setNewItem(e.target.value)}
                     type="text"
@@ -101,6 +102,7 @@ function AddItemForm({ onNewItem }) {
                 />
                 <InputGroup.Append>
                     <Button
+                        id="todo-add" 
                         type="submit"
                         variant="success"
                         disabled={!newItem.length}
